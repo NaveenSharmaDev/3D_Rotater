@@ -7,39 +7,42 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
 html, body {
   height: 100%;
   width: 100%;
   background: #000; /* fallback while spline loads */
 }
 
+
 /* Fullscreen spline background (behind everything) */
 .cards {
   position: fixed;
-  inset: 0;               /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;                  /* top:0; right:0; bottom:0; left:0; */
   width: 100%;
   height: 100%;
   z-index: -1;
-  pointer-events: none;   /* allow clicks on navbar */
+  pointer-events: none;      /* allow clicks on navbar */
 }
+
 
 /* Make sure the web-component fills the wrapper */
 .cards > spline-viewer {
   display: block;
   width: 100%;
   height: 100%;
-  transform: scale(0.9) translateX(100px); /* smaller + shifted right */
+  transform: scale(0.9) translateX(100px);    /* smaller + shifted right */
   transform-origin: center;
 }
 
 
 /* Navbar overlay: positioned above the spline */
 .container {
-  position: absolute;     /* floats on top of the background */
+  position: absolute;        /* floats on top of the background */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;          /* high so it's always above .cards */
+  z-index: 9999;              /* high so it's always above .cards */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +94,7 @@ nav a:hover {
 .signin:hover {
   background: rgba(255,255,255,0.18);
 }
+
 
 /* Small-screen adjustments */
 
